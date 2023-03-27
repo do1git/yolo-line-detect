@@ -3,4 +3,4 @@
 
 ## How to launch
 * $ pip install -r requirements.txt
-* $ python3 mainDens
+* $ python3 mainDens.py

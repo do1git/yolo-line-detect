@@ -5,6 +5,9 @@ from sklearn.cluster import DBSCAN
 from sklearn.linear_model import LinearRegression
 import time
 
+# 밀도로 군집화 + [속도, 조향각]
+
+
 def fit_line(points):
     # Fit a line to the points
     line_model = LinearRegression().fit(points[:, 0].reshape(-1, 1), points[:, 1])
@@ -19,7 +22,8 @@ def fit_line(points):
 model = torch.hub.load('ultralytics/yolov5', 'yolov5s')
 
 # Start the webcam
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(0) # 0번째 카메라 로드
+
 
 max_speed = 10  # Maximum speed (km/h)
 
